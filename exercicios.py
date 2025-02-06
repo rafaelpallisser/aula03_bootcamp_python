@@ -34,10 +34,10 @@
 # com severidade 'ERROR'. Dado um registro de log em formato de dicionário 
 # como `log = {'timestamp': '2021-06-23 10:00:00', 'level': 'ERROR', 'message': 'Falha na conexão'}`, 
 # escreva um programa que imprima a mensagem se a severidade for 'ERROR'.
-log = {'timestamp': '2021-06-23 10:00:00', 'level': 'ERROR', 'message': 'Falha na conexão'}
+# log = {'timestamp': '2021-06-23 10:00:00', 'level': 'ERROR', 'message': 'Falha na conexão'}
 
-if log['level'] == 'ERROR':
-    print('A severidade é ERRO')
+# if log['level'] == 'ERROR':
+#     print('A severidade é ERRO')
 
 
 ### Exercício 4: Validação de Dados de Entrada
@@ -45,6 +45,17 @@ if log['level'] == 'ERROR':
 # você precisa garantir que cada usuário tenha idade entre 18 e 65 anos e tenha 
 # fornecido um email válido. Escreva um programa que valide essas condições 
 # e imprima "Dados de usuário válidos" ou o erro específico encontrado.
+email = input('Digite o email do usuário: ')
+idade = int(input('Digite a idade do usuário: '))
+
+if '@' in email:
+    if idade >= 18 and idade <= 65:
+        print('Dados de usuário válidos')
+    else:
+        print('Idade do usuário inválida')
+else:
+    print('Email do usuário inválido')
+
 
 ### Exercício 5: Detecção de Anomalias em Dados de Transações
 # Você está trabalhando em um sistema de detecção de fraude e precisa identificar 
