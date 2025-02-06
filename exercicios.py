@@ -11,7 +11,6 @@
 # else:
 #     print('Preço inválido!')
 
-
 ### Exercício 2: Classificação de Dados de Sensor
 # Imagine que você está trabalhando com dados de sensores IoT. 
 # Os dados incluem medições de temperatura. Você precisa classificar cada leitura 
@@ -28,7 +27,6 @@
 # else:
 #     print('Alta')
 
-
 ### Exercício 3: Filtragem de Logs por Severidade
 # Você está analisando logs de uma aplicação e precisa filtrar mensagens 
 # com severidade 'ERROR'. Dado um registro de log em formato de dicionário 
@@ -39,22 +37,21 @@
 # if log['level'] == 'ERROR':
 #     print('A severidade é ERRO')
 
-
 ### Exercício 4: Validação de Dados de Entrada
 # Antes de processar os dados de usuários em um sistema de recomendação, 
 # você precisa garantir que cada usuário tenha idade entre 18 e 65 anos e tenha 
 # fornecido um email válido. Escreva um programa que valide essas condições 
 # e imprima "Dados de usuário válidos" ou o erro específico encontrado.
-email = input('Digite o email do usuário: ')
-idade = int(input('Digite a idade do usuário: '))
+# email = input('Digite o email do usuário: ')
+# idade = int(input('Digite a idade do usuário: '))
 
-if '@' in email:
-    if idade >= 18 and idade <= 65:
-        print('Dados de usuário válidos')
-    else:
-        print('Idade do usuário inválida')
-else:
-    print('Email do usuário inválido')
+# if '@' in email:
+#     if idade >= 18 and idade <= 65:
+#         print('Dados de usuário válidos')
+#     else:
+#         print('Idade do usuário inválida')
+# else:
+#     print('Email do usuário inválido')
 
 
 ### Exercício 5: Detecção de Anomalias em Dados de Transações
@@ -62,6 +59,12 @@ else:
 # transações suspeitas. Uma transação é considerada suspeita se o valor for superior 
 # a R$ 10.000 ou se ocorrer fora do horário comercial (antes das 9h ou depois das 18h). 
 # Dada uma transação como `transacao = {'valor': 12000, 'hora': 20}`, verifique se ela é suspeita.
+transacao = {'valor': 12000, 'hora': 20}
+
+if transacao['valor'] >= 10000 or transacao['hora'] < 9 or transacao['hora'] > 20:
+    print('Transação suspeita')
+else:
+    print('Transação válida')
 
 ### Exercício 6. Contagem de Palavras em Textos
 # Objetivo:** Dado um texto, contar quantas vezes cada palavra única aparece nele.
