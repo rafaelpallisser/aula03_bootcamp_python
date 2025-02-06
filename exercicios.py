@@ -3,6 +3,14 @@
 # que todos os registros tenham valores positivos para `quantidade` e `preço`. 
 # Escreva um programa que verifique esses campos e imprima "Dados válidos" se ambos 
 # forem positivos ou "Dados inválidos" caso contrário.
+quantidade = 20
+preco = 10
+
+if quantidade > 0 and preco > 0:
+    print('Preço válido!')
+else:
+    print('Preço inválido!')
+
 
 ### Exercício 2: Classificação de Dados de Sensor
 # Imagine que você está trabalhando com dados de sensores IoT. 
